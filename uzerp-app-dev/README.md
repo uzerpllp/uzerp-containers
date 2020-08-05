@@ -14,7 +14,7 @@ This image is based on the [official PHP image](https://hub.docker.com/_/php), a
 Example usage:
 
 ```
-podman run --pod uzerp-pod --name uzerp-app-dev --security-opt label=disable \
+$ podman run --pod uzerp-pod --name uzerp-app-dev --security-opt label=disable \
 -v /home/uzerp:/var/www/html:rw \
 --env XDEBUG_CONFIG="remote_host=198.51.100.1 remote_port=9000" -e TZ="Europe/London" \
 -d quay.io/uzerp/uzerp-app-dev
