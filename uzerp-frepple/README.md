@@ -33,7 +33,7 @@ $ podman run --rm -i --entrypoint="" uzerp-frepple cat /app/frepple/djangosettin
 * https://www.uzerp.com
 * https://github.com/uzerpllp/uzerp
 
-**Frepple ia an Open Source Advanced Planning and Scheduling (APS) system**
+**Frepple is an Open Source Advanced Planning and Scheduling (APS) system**
 
 * https://frepple.org/
 * https://github.com/frePPLe/frepple
