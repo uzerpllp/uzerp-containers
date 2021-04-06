@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ARG FREPPLE_VERSION
+ARG FREPPLE_VERSION="6.12.0"
 
 LABEL "maintainer"="Steve Blamey <sblamey@uzerp.com>"
 LABEL "frepple_version"="$FREPPLE_VERSION"
