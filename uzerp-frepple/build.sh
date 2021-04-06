@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -o errexit
 
-FREPPLE_VER="6.11.0"
+# frepple version to build into the container image
+FREPPLE_VER="6.12.0"
 
-buildah bud -t quay.io/uzerp/uzerp-frepple:latest -t quay.io/uzerp/uzerp-frepple:$FREPPLE_VER
+# Build the image using buildah
+buildah bud --build-arg FREPPLE_VERSION=$FREPPLE_VER -t quay.io/uzerp/uzerp-frepple:latest -t quay.io/uzerp/uzerp-frepple:$FREPPLE_VER
