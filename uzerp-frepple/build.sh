@@ -5,4 +5,4 @@ set -o errexit
 FREPPLE_VER="6.22.0"
 
 # Build the image using buildah
-buildah bud --build-arg FREPPLE_VERSION=$FREPPLE_VER -t quay.io/uzerp/uzerp-frepple:latest -t quay.io/uzerp/uzerp-frepple:$FREPPLE_VER
+buildah bud --build-arg FREPPLE_VERSION=$FREPPLE_VER -t ghcr.io/uzerpllp/uzerp-frepple:latest -t ghcr.io/uzerpllp/uzerp-frepple:$FREPPLE_VER

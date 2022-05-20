@@ -2,4 +2,4 @@
 set -o errexit
 
 VERSION=10
-buildah bud -t quay.io/uzerp/uzerp-postgres:latest -t quay.io/uzerp/uzerp-postgres:$VERSION
+buildah bud -t ghcr.io/uzerpllp/uzerp-postgres:latest -t ghcr.io/uzerpllp/uzerp-postgres:$VERSION

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -o errexit
 
-VERSION="20.07"
+VERSION="22.05"
 
-buildah bud -t quay.io/uzerp/uzerp-app-dev:latest -t quay.io/uzerp/uzerp-app-dev:$VERSION
+buildah bud -t ghcr.io/uzerpllp/uzerp-app-dev:latest -t ghcr.io/uzerpllp/uzerp-app-dev:$VERSION

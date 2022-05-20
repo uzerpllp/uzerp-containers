@@ -1,6 +1,6 @@
 # uzERP Frepple Image
 
-[![Docker Repository on Quay](https://quay.io/repository/uzerp/uzerp-frepple/status "Docker Repository on Quay")](https://quay.io/repository/uzerp/uzerp-frepple)
+`podman pull ghcr.io/uzerpllp/uzerp-frepple:latest`
 
 On github: https://github.com/uzerpllp/uzerp-containers
 

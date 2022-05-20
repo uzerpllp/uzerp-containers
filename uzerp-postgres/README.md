@@ -1,6 +1,6 @@
 # uzERP PostgreSQL Image
 
-[![Docker Repository on Quay](https://quay.io/repository/uzerp/uzerp-postgres/status "Docker Repository on Quay")](https://quay.io/repository/uzerp/uzerp-postgres)
+`podman pull ghcr.io/uzerpllp/uzerp-postgres:latest`
 
 On github: https://github.com/uzerpllp/uzerp-containers
 

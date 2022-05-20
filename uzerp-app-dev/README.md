@@ -1,6 +1,6 @@
 # uzERP Development Image
 
-[![Docker Repository on Quay](https://quay.io/repository/uzerp/uzerp-app-dev/status "Docker Repository on Quay")](https://quay.io/repository/uzerp/uzerp-app-dev)
+`podman pull ghcr.io/uzerpllp/uzerp-app-dev:latest`
 
 On github: https://github.com/uzerpllp/uzerp-containers
 
