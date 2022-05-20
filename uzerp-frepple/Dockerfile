@@ -1,16 +1,20 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
-ARG FREPPLE_VERSION="6.12.0"
+ARG FREPPLE_VERSION="6.22.0"
 
 LABEL "maintainer"="Steve Blamey <sblamey@uzerp.com>"
 LABEL "frepple_version"="$FREPPLE_VERSION"
 
+ENV TZ=Europe/London
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN groupadd -g 1000 frepple
 RUN useradd -u 1000 -g 1000 frepple
 
 # Install required packages and python pre-requisites
 RUN apt-get update
-RUN apt-get -y install python3 python3-pip gcc cmake libtool libxerces-c-dev python3-dev wget git
+RUN apt-get -y install python3 python3-pip python3-setuptools gcc cmake libtool libxerces-c-dev libpq-dev wget git
+RUN pip3 install -U pip
 RUN pip3 --no-cache-dir install wheel psycopg2-binary gunicorn whitenoise
 RUN pip3 --no-cache-dir install git+https://github.com/uzerpllp/uzerpfrepple.git
 
@@ -33,7 +37,7 @@ RUN rm -rf /app/frepple/build
 RUN apt-mark manual python3-setuptools python3-six
 
 # Remove un-needed packages
-RUN apt-get -y remove --purge python3-pip gcc cmake libtool libxerces-c-dev python3-dev wget git
+RUN apt-get -y remove --purge python3-pip python3-setuptools gcc cmake libtool libxerces-c-dev python3-dev libpq-dev wget git
 RUN apt-get clean
 
 RUN chown -R 1000:1000 /app/frepple/logs
