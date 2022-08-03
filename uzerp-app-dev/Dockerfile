@@ -2,10 +2,10 @@ FROM php:7.3-apache
 
 LABEL "maintainer"="Steve Blamey <sblamey@uzerp.com>" 
 
-ADD 'https://raw.githubusercontent.com/mlocati/docker-php-extension-installer/master/install-php-extensions' '/usr/local/bin/'
+ADD 'https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions' '/usr/local/bin/'
 RUN chmod a+x /usr/local/bin/install-php-extensions
 RUN sync
-RUN /usr/local/bin/install-php-extensions pdo_pgsql pgsql memcached bcmath gettext xdebug
+RUN /usr/local/bin/install-php-extensions pdo_pgsql pgsql memcached bcmath gettext gd xdebug
 
 RUN bash -c 'echo "xdebug.default_enable = off" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini'
 RUN bash -c 'echo "xdebug.remote_enable = on" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini'
