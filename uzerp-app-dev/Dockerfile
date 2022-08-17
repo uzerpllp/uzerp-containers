@@ -19,7 +19,7 @@ RUN mkdir -p /usr/share/man/man1
 
 
 RUN apt-get update
-RUN apt-get -y install fop qpdf iproute2
+RUN apt-get -y install fop libavalon-framework-java libfontbox-java qpdf iproute2
 
 # Copy in Barcode4J and custom apache fop script
 COPY files/barcode4j-2.1.0/ /usr/share/barcode4j-2.1.0/
